@@ -132,7 +132,7 @@ body{
 }
 
 .hero-btn-secondary:hover {
-    border-color: #ffffff;
+    background-color: #ffffff;
     color: #0a0a0a;
 }
 
