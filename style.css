@@ -120,8 +120,8 @@ body{
 .hero-btn-secondary {
     display: inline-block;
     padding: 15px 40px;
-    border: 1px solid #555555;
-    color: #aaaaaa;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     text-decoration: none;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -133,7 +133,7 @@ body{
 
 .hero-btn-secondary :hover {
     border-color: #ffffff;
-    color: #ffffff;
+    color: #0a0a0a;
 }
 
 /* About Section */
