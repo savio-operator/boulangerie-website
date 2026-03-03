@@ -131,7 +131,7 @@ body{
     border-radius: 30px;
 }
 
-.hero-btn-secondary :hover {
+.hero-btn-secondary:hover {
     border-color: #ffffff;
     color: #0a0a0a;
 }
