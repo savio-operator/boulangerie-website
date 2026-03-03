@@ -109,6 +109,7 @@ body{
     font-size: 0.85rem;
     margin: 10px;
     transition: all 0.3s ease;
+    border-radius: 30px;
 }
 
 .hero-btn:hover {
@@ -127,6 +128,7 @@ body{
     font-size: 0.85rem;
     margin: 10px;
     transition: all 0.3s ease;
+    border-radius: 30px;
 }
 
 .hero-btn-secondary :hover {
