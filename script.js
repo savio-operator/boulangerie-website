@@ -13,7 +13,7 @@ nextBtn.addEventListener('click', ()=> {
     } else {
         currentIndex = 0;
     }
-    updateCarosuel();
+    updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
@@ -22,10 +22,10 @@ prevBtn.addEventListener('click', () => {
     } else {
         currentIndex = totalImages - 1;
     }
-    updateCarosuel();
+    updateCarousel();
 });
 
-function updateCarosuel() {
+function updateCarousel() {
     const imageWidth = images[0].offsetWidth + 20;
-    track.style.transform = 'translateX(-${currentIndex * imageWidth}px)';
+    track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
 }
