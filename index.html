@@ -64,98 +64,15 @@
                         <button class="tab-btn" data-category="beverages">Beverages</button>
                     </div>
 
-                    <div class="menu-timeline" id="menuTimeline">
-                        <canvas id="curveCanvas"></canvas>
-                        <div class="menu-item" data-category="breakfast" data-index="0">
-                            <div class="menu-circle">
-                                <span class="item-initial">LB</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>Loaded Breakfast Burrito</h3>
-                                <p>Soft tortilla packed with fluffy eggs, spicy chicken mince, roasted peppers, cheese, and chipotle crema</p>
-                                <span class="price">₹455</span>
-                            </div>
-                        </div>
+                    <div class="menu-timeline">
+                        <svg class="curved-path" viewBox="0 0 200 1000" preserveAspectRatio="none">
+                            <path d="M 100 0 C 150 100, 50 200, 100 300 C 150 400, 50 500, 100 600 C 150 700, 50 800, 100 900 C 150 950, 50 980, 100 1000"
+                                fill="none"
+                                stroke="#1a1a1a"
+                                stroke-width="1"/> 
+                        </svg>
 
-                        <div class="menu-item" data-category="breakfast" data-index="1">
-                            <div class="menu-circle">
-                                <span class="item-initial">SK</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>Shakshuka</h3>
-                                <p>Eggs poached in a chunky tomato-pepper sauce with grilled chicken sausage, cumin, paprika, and parsley</p>
-                                <span class="price">₹507</span>
-                            </div>
-                        </div>
-
-                        <div class="menu-item" data-category="breakfast" data-index="2">
-                            <div class="menu-circle">
-                                <span class="item-initial">BB</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>The Boulangerie Breakfast</h3>
-                                <p>Grilled chicken sausage, herbed scrambled eggs, garlic mushrooms, baked beans, cherry tomatoes, crispy hash browns, and buttered sourdough</p>
-                                <span class="price">₹637</span>
-                            </div>
-                        </div>
-
-                        <div class="menu-item" data-category="pasta" data-index="3">
-                            <div class="menu-circle">
-                                <span class="item-initial">CM</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>Creamy Mushroom Fettuccine</h3>
-                                <p>Fettuccine tossed in a rich mushroom cream sauce with herbs</p>
-                                <span class="price">₹494</span>
-                            </div>
-                        </div>
-
-                        <div class="menu-item" data-category="pizza" data-index="4">
-                            <div class="menu-circle">
-                                <span class="item-initial">CS</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>Chef's Special Seafood Pizza</h3>
-                                <p>Juicy shrimp tossed in chilli garlic butter with roasted peppers</p>
-                                <span class="price">₹1,014</span>
-                            </div>
-                        </div>
-
-                        <div class="menu-item" data-category="desserts" data-index="5">
-                            <div class="menu-circle">
-                                <span class="item-initial">NY</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>New York Cheesecake</h3>
-                                <p>Creamy classic New York style cheesecake</p>
-                                <span class="price">₹312</span>
-                            </div>
-                        </div>
-
-                        <div class="menu-item" data-category="coffee" data-index="6">
-                            <div class="menu-circle">
-                                <span class="item-initial">MC</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>Mocha</h3>
-                                <p>Espresso fused with chocolate and milk, creating a rich, chocolatey, bittersweet delight</p>
-                                <span class="price">₹385</span>
-                            </div>
-                        </div>
-
-                        <div class="menu-item" data-category="beverages" data-index="7">
-                            <div class="menu-circle">
-                                <span class="item-initial">BH</span>
-                            </div>
-                            <div class="menu-content">
-                                <h3>Blue Hawaiian</h3>
-                                <p>A vibrant tropical non-alcoholic drink with refreshing fruity flavor</p>
-                                <span class="price">₹338</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item left" data-category="breakfast">
+                        <div class="menu-item left" data-category="breakfast">
                         <div class="menu-circle">
                             <span class="item-initial">LB</span>
                         </div>
@@ -266,7 +183,7 @@
                         <a href="#contact" class="hero-btn">Reserve Your Table</a>
                     </div>
                 </div>
-
+                
 <script src = "script.js"></script>
     </body>
 </html>
