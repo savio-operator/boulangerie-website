@@ -31,3 +31,26 @@ function updateCarousel() {
 }
 
 setInterval(() => { nextBtn.click(); }, 3000);
+
+//Menu tab filtering
+const tabBtns = document.querySelectorAll('.tab-btn');
+const menuItems = document.querySelectorAll('.menu-item');
+
+tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active from all tabs
+        tabBtns.forEach(b => b.classList.remove('active'));
+        // Add active to clicked tab
+        btn.classList.add('active');
+        
+        const category = btn.dataset.category;
+        
+        menuItems.forEach(item => {
+            if (item.dataset.category === category) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
