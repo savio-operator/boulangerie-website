@@ -26,6 +26,6 @@ prevBtn.addEventListener('click', () => {
 });
 
 function updateCarousel() {
-    const imageWidth = images[0].offsetWidth + 20;
+    const imageWidth = 420;
     track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
 }
