@@ -29,3 +29,5 @@ function updateCarousel() {
     const imageWidth = 420;
     track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
 }
+
+setInterval(() => { nextBtn.click(); }, 3000);
