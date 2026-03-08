@@ -63,7 +63,7 @@ function drawMenuCurve() {
         const prev = points[i - 1];
         const curr = points[i];
         const midY = (prev.y + curr.y) / 2;
-        const offset = i % 2 === 0 ? -60 : 60;
+        const offset = i % 2 === 0 ? -30 : 30;
         pathD += ` C ${prev.x + offset} ${midY}, ${curr.x + offset} ${midY}, ${curr.x} ${curr.y}`;
     }
 
