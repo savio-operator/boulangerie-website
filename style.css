@@ -167,7 +167,7 @@ body{
     display: flex;
     gap: 20px;
     padding: 0 60px;
-    transition: transform 0.3s ease;
+    animation: scrollLeft 20s linear infinite;
 }
 
 .carousel-track img {
@@ -492,6 +492,16 @@ body{
 
 .contact-right {
     text-align: right;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffffff;
 }
 
 .footer-right p {
