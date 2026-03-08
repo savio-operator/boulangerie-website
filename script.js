@@ -1,5 +1,3 @@
-// Carousel functionality - DELETED (now CSS animation)
-
 // Menu tab filtering
 const tabBtns = document.querySelectorAll('.tab-btn');
 const menuItems = document.querySelectorAll('.menu-item');
@@ -11,7 +9,7 @@ tabBtns.forEach(btn => {
         const category = btn.dataset.category;
         menuItems.forEach(item => {
             if (item.dataset.category === category) {
-                item.style.display = 'flex';
+                item.style.display = 'grid'; // grid not flex — matches CSS layout
                 item.style.opacity = '1';
                 item.style.pointerEvents = 'auto';
             } else {
@@ -20,11 +18,11 @@ tabBtns.forEach(btn => {
                 item.style.pointerEvents = 'none';
             }
         });
-        drawMenuCurve(); // ← calls the curve after switching tab
+        setTimeout(drawMenuCurve, 50); // wait for DOM to repaint before drawing
     });
 });
 
-// Run once on load to hide non-active items
+// Hide non-breakfast items on load
 menuItems.forEach(item => {
     if (item.dataset.category !== 'breakfast') {
         item.style.display = 'none';
@@ -33,7 +31,8 @@ menuItems.forEach(item => {
     }
 });
 
-setTimeout(drawMenuCurve, 100); // ← draws curve on first load
+// Draw curve on first load
+setTimeout(drawMenuCurve, 100);
 
 // Draw curve function
 function drawMenuCurve() {
@@ -97,4 +96,3 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
-
