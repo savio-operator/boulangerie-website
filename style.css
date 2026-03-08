@@ -45,12 +45,16 @@ body{
     font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    transition: all 0.5s ease;
 }
 
 .nav-links :hover {
     background-color: #ffffff;
     color: #0a0a0a;
-    border-radius: 30px;
+    border-color: #ffffff;
 }
 
 .navbar.scrolled {
@@ -315,10 +319,12 @@ body{
 
 .menu-item.left {
     flex-direction: row;
+    padding-right: 60px;
 }
 
 .menu-item.right {
     flex-direction: row-reverse;
+    padding-left: 60px;
 }
 
 .menu-circle {
