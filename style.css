@@ -305,14 +305,15 @@ body{
 }
 
 .menu-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 140px 1fr 20px 1fr 140px;
     align-items: center;
     padding-bottom: 60px;
     margin-bottom: 60px;
     border-bottom: 1px solid #e8e8e8;
     position: relative;
     z-index: 1;
-    width: 100%;
+    gap: 15px;
 }
 
 .menu-item:last-of-type {
@@ -321,52 +322,16 @@ body{
     padding-bottom: 0;
 }
 
-/* LEFT: circle | spacer | dot | content */
-.menu-item.left {
-    flex-direction: row;
-}
+/* LEFT items: circle in col1, dot in col3, content in col4 */
+.menu-item.left .menu-circle { grid-column: 1; }
+.menu-item.left .menu-dot    { grid-column: 3; justify-self: center; }
+.menu-item.left .menu-content{ grid-column: 4; }
 
-.menu-item.left .menu-circle {
-    flex-shrink: 0;
-    margin-right: auto;
-}
-
-.menu-item.left .menu-dot {
-    flex-shrink: 0;
-    margin: 0 20px;
-}
-
-.menu-item.left .menu-content {
-    width: 35%;
-    flex-shrink: 0;
-    text-align: left;
-}
-
-/* RIGHT: content | dot | spacer | circle */
-.menu-item.right {
-    flex-direction: row-reverse;
-}
-
-.menu-item.right .menu-circle {
-    flex-shrink: 0;
-    margin-left: auto;
-}
-
-.menu-item.right .menu-dot {
-    flex-shrink: 0;
-    margin: 0 20px;
-}
-
-.menu-item.right .menu-content {
-    width: 35%;
-    flex-shrink: 0;
-    text-align: right;
-}
-
-.menu-item.right .food-badge {
-    display: block;
-    text-align: right;
-}
+/* RIGHT items: content in col2, dot in col3, circle in col5 */
+.menu-item.right .menu-content{ grid-column: 2; text-align: right; }
+.menu-item.right .menu-dot    { grid-column: 3; justify-self: center; }
+.menu-item.right .menu-circle { grid-column: 5; }
+.menu-item.right .food-badge  { display: block; text-align: right; }
 
 .menu-circle {
     width: 120px;
