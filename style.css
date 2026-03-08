@@ -49,6 +49,7 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 30px;
     transition: all 0.5s ease;
+    background-color: transparent;
 }
 
 .nav-links :hover {
@@ -309,22 +310,62 @@ body{
 }
 
 .menu-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #e8e8e8;
     position: relative;
-    gap: 30px;
+    gap: 20px;
     z-index: 1;
 }
 
-.menu-item.left {
-    flex-direction: row;
-    padding-right: 60px;
+.menu-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.menu-item.right {
-    flex-direction: row-reverse;
-    padding-left: 60px;
+/* LEFT item: circle on far left, content on right side of center */
+.menu-item.left .menu-circle {
+    grid-column: 1;
+    justify-self: start;
+}
+
+.menu-item.left .menu-dot {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.menu-item.left .menu-content {
+    grid-column: 3;
+    justify-self: start;
+    padding-left: 20px;
+}
+
+/* RIGHT item: content on left side of center, circle on far right */
+.menu-item.right .menu-content {
+    grid-column: 1;
+    justify-self: end;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.menu-item.right .menu-dot {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.menu-item.right .menu-circle {
+    grid-column: 3;
+    justify-self: end;
+}
+
+.menu-item.right .food-badge {
+    display: block;
+    text-align: right;
 }
 
 .menu-circle {
